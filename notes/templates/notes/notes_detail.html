@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>
+        {{note.title}}
+    </h1>
+    <p class="note-li">
+        {{note.text}}
+    </p>
+<a href="{%url 'notes.list'%}" class="btn btn-sceondary">Back</a>
+<a href="{%url 'notes.update' pk=note.id%}" class="btn btn-sceondary">Edit</a>
+<a href="{%url 'notes.delete' pk=note.id%}" class="btn btn-danger">Delete</a>
+{% endblock %}
